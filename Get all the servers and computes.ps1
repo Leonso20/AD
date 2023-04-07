@@ -1,0 +1,1 @@
+﻿Get-ADComputer -Filter * -Properties * |Select-Object CN, LastLogonDate, OperatingSystem, CanonicalName, Enabled, Description |Export-Csv ADcomp.csv -NoTypeInformation -Encoding UTF8

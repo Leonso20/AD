@@ -1,0 +1,1 @@
+﻿get-aduser -Identity TimecardSvc  -Properties "LastLogonDate"

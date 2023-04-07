@@ -1,0 +1,1 @@
+﻿ Get-ADUser -Filter {(employeeID -like "*")} -property employeeID |Group employeeid | ? {$_.Count -ge 2} | select -ExpandProperty group | Select-Object Enabled, ObjectClass, Name, distinguishedName, SamAccountName, employeeID 

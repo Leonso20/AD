@@ -1,0 +1,1 @@
+﻿Get-ADComputer -Filter {enabled -eq $true} -properties *|select Name, DNSHostName, OperatingSystem, LastLogonDate | Export-Csv c:\pcs.csv
