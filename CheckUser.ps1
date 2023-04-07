@@ -1,9 +1,6 @@
 ﻿<# --------------------------------------------------------------------------------------------
    Title: AD User Checker 1.0
-   Author: Carly Salali Germany
-   Version: 1.0 (beta)
-   Date Created : 10/15/2019
-   Last Modified: 10/15/2019
+ 
    Description: Check AD User stats and alert to space in UPN or missing attributes or field data.
 
 ------------------------------------------------------------------------------------------------- #>
@@ -231,7 +228,14 @@ function Check_User($User_Object)
          Write("SID : "+ $User_Object.SID);
 
 
-         switch(Read-Host "`n`nEnter ANYTHING to continue.")         {              default {                           Clear;                          Write-Host("`n`n Exiting to Main Menu...`n`n") -foregroundcolor "Red";                          break;                       };         }
+         switch(Read-Host "`n`nEnter ANYTHING to continue.")
+         {
+              default {  
+                         Clear; 
+                         Write-Host("`n`n Exiting to Main Menu...`n`n") -foregroundcolor "Red"; 
+                         break; 
+                      };
+         }
 
          #Get Lockout Info from Logs
          #Get-EventLog -LogName "Security" -ComputerName "AD_Server" -After (Get-Date).AddDays(-1) -InstanceID "4740" | Select TimeGenerated, ReplacementString
