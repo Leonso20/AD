@@ -33,7 +33,7 @@ foreach ($user in $disabledUsers) {
 }
 
 # Save the Excel file
-$filename = "C:\Users\ea6\Documents\DisabledUsers.xlsx"
+$filename = "C:\Users\Your Profile\Documents\DisabledUsers.xlsx"
 if (Test-Path $filename) {
     Remove-Item $filename -Force
 }
